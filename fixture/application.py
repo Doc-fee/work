@@ -1,4 +1,5 @@
 from selenium import webdriver
+from fixture.details import DetailsHelper
 from fixture.filter import FilterHelper
 from fixture.forms import FormsHelper
 import time
@@ -9,6 +10,7 @@ class Application:
         self.wd.implicitly_wait(30)
         self.filter = FilterHelper(self)
         self.forms = FormsHelper(self)
+        self.details = DetailsHelper(self)
 
     def open_home_page(self):
         wd = self.wd
