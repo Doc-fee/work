@@ -51,3 +51,13 @@ class FormsHelper:
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='2.2 Отказы по системам']").click()
         time.sleep(15)
+
+    def select_1_12(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.12 Закрытия ЖАТ']").click()
+        time.sleep(15)
+
+    def select_1_15(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.15 Пропуск по дополнительным средствам']").click()
+        time.sleep(15)
