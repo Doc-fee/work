@@ -64,6 +64,7 @@ class DetailsHelper:
                 if indextd != 0 and indextd % 3 != 0:
                     a = td.find_elements_by_tag_name("a")
                     if len(a) > 0:
+                        value = 0
                         value = a[0].text
                         if value:
                             value = int(value)
@@ -78,6 +79,7 @@ class DetailsHelper:
                                     print('Строка: ' + str(indextr) + ' Столбец: ' + str(
                                         indextd) + ' Не загружает детализацию.')
                                 else:
+                                    row_count = 0
                                     row_count = len(wd.find_elements_by_xpath(
                                         "//div[@data-type='detail']//tbody[@id='dataBody']/tr"))
                                     list_detail.append(row_count)
@@ -95,3 +97,4 @@ class DetailsHelper:
                     else:
                         print('Строка: '+ str(indextr) + ' Столбец: '+ str(indextd) + " Нет данных для проверки")
                 indextd += 1
+

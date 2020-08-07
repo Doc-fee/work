@@ -11,6 +11,8 @@ class Application:
         self.filter = FilterHelper(self)
         self.forms = FormsHelper(self)
         self.details = DetailsHelper(self)
+#        self.clear_window =
+#        self.wait("visible")
 
     def open_home_page(self):
         wd = self.wd
@@ -18,9 +20,15 @@ class Application:
 
     def click_on_clear(self):
         wd = self.wd
-        time.sleep(2)
         wd.find_element_by_xpath("//div[@id='starting-overlay']/div/img").click()
         time.sleep(2)
+
+    def remember_the_total_number(self):
+        wd = self.wd
+        total_number = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[-1]/td[3]")
+        int_total_number = int(total_number)
+        print(int_total_number)
+
 
     def destroy(self):
         self.wd.quit()

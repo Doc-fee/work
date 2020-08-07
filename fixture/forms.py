@@ -26,10 +26,16 @@ class FormsHelper:
         wd = self.app.wd
         wd.find_element_by_xpath("(//div[text()='IV. Технологические нарушения'])").click()
         time.sleep(3)
+
 # Choice form
     def select_high_speed(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='Скоростной ход']").click()
+        time.sleep(15)
+
+    def select_1_1(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.1 Отказы ЖАТ всего']").click()
         time.sleep(15)
 
     def select_1_11(self):
@@ -37,9 +43,14 @@ class FormsHelper:
         wd.find_element_by_xpath("//span[text()='1.11 Эксплуатационные последствия']").click()
         time.sleep(15)
 
-    def select_1_1(self):
+    def select_1_12(self):
         wd = self.app.wd
-        wd.find_element_by_xpath("//span[text()='1.1 Отказы ЖАТ всего']").click()
+        wd.find_element_by_xpath("//span[text()='1.12 Закрытия ЖАТ']").click()
+        time.sleep(15)
+
+    def select_1_15(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.15 Пропуск по дополнительным средствам']").click()
         time.sleep(15)
 
     def select_2_1(self):
@@ -52,12 +63,17 @@ class FormsHelper:
         wd.find_element_by_xpath("//span[text()='2.2 Отказы по системам']").click()
         time.sleep(15)
 
-    def select_1_12(self):
+    def select_3_3(self):
         wd = self.app.wd
-        wd.find_element_by_xpath("//span[text()='1.12 Закрытия ЖАТ']").click()
+        wd.find_element_by_xpath("//li[@title='Отказы по типам и элементам стрелочных электроприводов']").click()
         time.sleep(15)
 
-    def select_1_15(self):
+    def select_3_4(self):
         wd = self.app.wd
-        wd.find_element_by_xpath("//span[text()='1.15 Пропуск по дополнительным средствам']").click()
+        wd.find_element_by_xpath("//span[text()='3.4 Стрелочные переводы по элементам']").click()
+        time.sleep(15)
+
+    def select_3_8(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.8 Кабельные линии']").click()
         time.sleep(15)
