@@ -33,3 +33,4 @@ def test_filter_counter(app):
     app.filter.open_filter()
     app.filter.remember_the_filter_counter_number()
     app.details.detail_all()
+#
