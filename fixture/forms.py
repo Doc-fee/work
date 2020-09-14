@@ -38,6 +38,21 @@ class FormsHelper:
         wd.find_element_by_xpath("//span[text()='1.1 Отказы ЖАТ всего']").click()
         time.sleep(15)
 
+    def select_1_2(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.2 Отказы ЖАТ Ш']").click()
+        time.sleep(15)
+
+    def select_1_3(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.3 Отказы ЖАТ Ш (ЭЦ)']").click()
+        time.sleep(15)
+
+    def select_1_4(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.4 Отказы ЖАТ Ш (АБ)']").click()
+        time.sleep(15)
+
     def select_1_11(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='1.11 Эксплуатационные последствия']").click()
@@ -53,14 +68,79 @@ class FormsHelper:
         wd.find_element_by_xpath("//span[text()='1.15 Пропуск по дополнительным средствам']").click()
         time.sleep(15)
 
+    def select_1_16(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.16 Отказы по объектам ЖАТ']").click()
+        time.sleep(15)
+
+    def select_1_24(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//li[@title='Отказы систем ЖАТ 1 и 2 категории по классам железнодорожных линий']").click()
+        time.sleep(15)
+
+    def select_1_25(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//li[@title='Отказы систем ЖАТ 3 категории по классам железнодорожных линий']").click()
+        time.sleep(15)
+
+    def select_1_27(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//li[@title='Опасные отказы устройств ЖАТ (Ш)']").click()
+        time.sleep(15)
+
     def select_2_1(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
-        time.sleep(15)
+        time.sleep(120)
 
     def select_2_2(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='2.2 Отказы по системам']").click()
+        time.sleep(60)
+
+    def select_2_3(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='2.3 Отказы по характеру']").click()
+        time.sleep(60)
+
+    def select_2_4(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='2.4 Эксплуатационные']").click()
+        time.sleep(60)
+
+    def select_2_5(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='2.5 Производственные']").click()
+        time.sleep(60)
+
+    def select_2_6(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='2.6 Деградационные']").click()
+        time.sleep(60)
+
+    def select_2_7(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='2.7 Внешние воздействия']").click()
+        time.sleep(60)
+
+    def select_2_9(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='2.9 Отказы по элементам и характеру']").click()
+        time.sleep(60)
+
+    def select_2_10(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='2.10 Отказы по системе и характеру ']").click()
+        time.sleep(60)
+
+    def select_3_1(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//li[@title='Отказы рельсовых линий по элементам и ответственным службам']").click()
+        time.sleep(15)
+
+    def select_3_2(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//li[@title='Отказы элементов рельсовой линии']").click()
         time.sleep(15)
 
     def select_3_3(self):
@@ -73,7 +153,63 @@ class FormsHelper:
         wd.find_element_by_xpath("//span[text()='3.4 Стрелочные переводы по элементам']").click()
         time.sleep(15)
 
+    def select_3_5(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.5 Сигналы']").click()
+        time.sleep(15)
+
+    def select_3_6(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.6 Аппаратура']").click()
+        time.sleep(15)
+
+    def select_3_7(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.7 Монтаж']").click()
+        time.sleep(15)
+
     def select_3_8(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='3.8 Кабельные линии']").click()
+        time.sleep(15)
+
+    def select_3_9(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.9 Воздушные линии']").click()
+        time.sleep(15)
+
+    def select_3_10(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.10 Аппараты управления']").click()
+        time.sleep(15)
+
+    def select_3_11(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.11 Электропитающие установки']").click()
+        time.sleep(15)
+
+    def select_3_13(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.13 Элементы защиты']").click()
+        time.sleep(15)
+
+    def select_3_15(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.15 Микропроцессорные системы ']").click()
+        time.sleep(15)
+
+
+    def select_3_16(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.16 ГАЦ']").click()
+        time.sleep(15)
+
+    def select_3_22(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.22 Срабатывания КГУ']").click()
+        time.sleep(15)
+
+    def select_3_23(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.23 Справка УКСПС, КГУ']").click()
         time.sleep(15)

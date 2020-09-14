@@ -1,9 +1,11 @@
+# -*- coding: utf-8 -*-
+
 
 # def test_detail_all(app):
 #     app.open_home_page()
 #     app.click_on_clear()
 #     app.forms.select_analytical_forms()
-#     app.forms.select_3_8()
+#     app.forms.select_3_1()
 #     app.filter.open_filter()
 #     app.filter.filter_for_2019()
 #     app.filter.click_filter_ok()
@@ -13,16 +15,18 @@
 #     app.open_home_page()
 #     app.click_on_clear()
 #     app.forms.select_analytical_forms()
-#     app.forms.select_3_8()
+#     app.forms.select_3_1()
 #     app.counter.counter_coulm3_last_row(app)
 
 def test_with_2_1(app):
     app.open_home_page()
     app.click_on_clear()
     app.forms.select_analytical_forms()
-    app.forms.select_3_8()
+    app.forms.select_3_1()
     app.filter.open_filter()
     app.filter.filter_for_2019()
     app.filter.filter_service_sh()
     app.filter.click_filter_ok()
-    app.assert_forms.assert_2_1_3_8()
+    app.assert_forms.assert_2_1_3_1()
+
+
