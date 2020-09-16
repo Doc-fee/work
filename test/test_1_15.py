@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#def test_1_12(app):
+#def test_detail_total(app):
 #    app.open_home_page()
 #    app.click_on_clear()
 #    app.forms.select_analytical_forms()

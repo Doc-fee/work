@@ -16,7 +16,7 @@
 #     app.click_on_clear()
 #     app.forms.select_analytical_forms()
 #     app.forms.select_3_2()
-#     app.counter.counter_coulm3_last_row(app)
+#     app.counter.counter_coulm9_first_row(app)
 
 def test_with_2_1(app):
     app.open_home_page()

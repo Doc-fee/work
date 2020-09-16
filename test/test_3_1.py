@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 # def test_detail_all(app):
 #     app.open_home_page()
 #     app.click_on_clear()
@@ -16,7 +15,7 @@
 #     app.click_on_clear()
 #     app.forms.select_analytical_forms()
 #     app.forms.select_3_1()
-#     app.counter.counter_coulm3_last_row(app)
+#     app.counter.counter_coulm9_first_row(app)
 
 def test_with_2_1(app):
     app.open_home_page()
