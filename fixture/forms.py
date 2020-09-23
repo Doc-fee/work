@@ -161,7 +161,7 @@ class FormsHelper:
     def select_3_6(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='3.6 Аппаратура']").click()
-        time.sleep(15)
+        time.sleep(30)
 
     def select_3_7(self):
         wd = self.app.wd
