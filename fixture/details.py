@@ -138,5 +138,5 @@ class DetailsHelper:
                     else:
                         print(str(index) + " Нет данных для проверки")
 
-                assert list_detail == list_common_table
             index += 1
+        assert list_detail == list_common_table
