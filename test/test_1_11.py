@@ -8,7 +8,7 @@ def test_detail_total(app):
     app.filter.open_filter()
     app.filter.filter_for_the_current_year()
     app.filter.click_filter_ok()
-    app.details.detail_total()
+    app.details.detail_total_for_1_11()
 
 # def test_detail_all(app):
 #     app.open_home_page()
