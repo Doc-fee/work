@@ -29,7 +29,7 @@
 
 def test_with_2_1(app):
     app.open_home_page()
-    app.click_on_clear()
+    app.click_starting_overlay()
     app.forms.select_analytical_forms()
     app.forms.select_3_7()
     app.filter.open_filter()

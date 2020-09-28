@@ -2,7 +2,7 @@
 
 def test_detail_total(app):
     app.open_home_page()
-    app.click_on_clear()
+    app.click_starting_overlay()
     app.forms.select_analytical_forms()
     app.forms.select_2_6()
     app.filter.open_filter()
@@ -13,7 +13,7 @@ def test_detail_total(app):
 
 def test_detail_all(app):
     app.open_home_page()
-    app.click_on_clear()
+    app.click_starting_overlay()
     app.forms.select_analytical_forms()
     app.forms.select_2_6()
     app.filter.open_filter()
@@ -23,7 +23,7 @@ def test_detail_all(app):
 
 def test_filter_counter(app):
     app.open_home_page()
-    app.click_on_clear()
+    app.click_starting_overlay()
     app.forms.select_analytical_forms()
     app.forms.select_2_6()
     app.counter.counter_coulm3_last_row(app)

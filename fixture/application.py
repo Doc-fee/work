@@ -21,10 +21,17 @@ class Application:
         wd = self.wd
         wd.get("http://onil-iis/onil.web.uo/")
 
-    def click_on_clear(self):
+    def click_clear(self):
         wd = self.wd
         wd.find_element_by_xpath("//div[@id='starting-overlay']/div/img").click()
         time.sleep(2)
+
+    def click_starting_overlay(self):
+        wd = self.wd
+        window = wd.find_elements_by_xpath("//div[@id='starting-overlay']")
+        if window:
+            self.click_clear()
+
 
     def destroy(self):
         self.wd.quit()

@@ -12,7 +12,7 @@
 
 def test_detail_all(app):
     app.open_home_page()
-    app.click_on_clear()
+    app.click_starting_overlay()
     app.forms.select_analytical_forms()
     app.forms.select_2_2()
     app.filter.open_filter()
@@ -29,7 +29,7 @@ def test_detail_all(app):
 
 def test_with_2_1(app):
     app.open_home_page()
-    app.click_on_clear()
+    app.click_starting_overlay()
     app.forms.select_analytical_forms()
     app.forms.select_2_1()
     app.filter.open_filter()
