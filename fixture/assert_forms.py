@@ -22,8 +22,8 @@ class AssertFormsHelper:
     def assert_2_1_3_2(self):
         wd = self.app.wd
         value3_2 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[1]/td[18]").text
-        if value3_3 == '':
-            value3_3 = 0
+        if value3_2 == '':
+            value3_2 = 0
         int_value3_2 = int(value3_2)
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
         time.sleep(300)
