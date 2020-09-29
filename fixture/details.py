@@ -79,6 +79,7 @@ class DetailsHelper:
                         f.write(' Нет данных для проверки\n')
             index += 1
         f.close()
+        assert list_detail == list_common_table
 
     def detail_all(self):
         wd = self.app.wd
@@ -184,3 +185,4 @@ class DetailsHelper:
                         f.write(' Нет данных для проверки\n')
                 indextd += 1
         f.close()
+        assert list_detail == list_common_table
