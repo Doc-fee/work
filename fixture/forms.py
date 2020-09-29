@@ -135,7 +135,7 @@ class FormsHelper:
 
     def select_3_1(self):
         wd = self.app.wd
-        wd.find_element_by_xpath("//li[@title='Отказы рельсовых линий по элементам и ответственным службам']").click()
+        wd.find_element_by_xpath("//span[text()='3.1 РЦ по элементам']").click()
         time.sleep(15)
 
     def select_3_2(self):
