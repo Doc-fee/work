@@ -81,6 +81,9 @@ class CounterHelper:
             print("Счётчик работает корректно")
         else:
             print("Ошибка в счётчике " + str(int_total_number) + " - " + str(int_number_filter))
+        # assert int_total_number == int_s_number_filter
+        # assert int_total_number == int_f_number_filter
+
 
     # оперативная отчётность + 3.23
     def counter_operational_reports(self, app):
@@ -105,6 +108,8 @@ class CounterHelper:
                 print("Ошибка в счётчике до кнопки 'ок' " + str(int_total_number) + " - " + str(int_f_number_filter))
         else:
             print("Ошибка в счётчике после кнопки 'ок' " + str(int_total_number) + " - " + str(int_s_number_filter))
+        assert int_total_number == int_s_number_filter
+        assert int_total_number == int_f_number_filter
 
     #только для форм, где всего отказов - 6й столбец, последняя строка
     #3.21, 3.22
@@ -131,3 +136,5 @@ class CounterHelper:
                 print("Ошибка в счётчике до кнопки 'ок' " + str(int_total_number) + " - " + str(int_f_number_filter))
         else:
             print("Ошибка в счётчике после кнопки 'ок' " + str(int_total_number) + " - " + str(int_s_number_filter))
+        assert int_total_number == int_s_number_filter
+        assert int_total_number == int_f_number_filter

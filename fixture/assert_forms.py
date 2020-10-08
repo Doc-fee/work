@@ -41,7 +41,7 @@ class AssertFormsHelper:
         int_value3_4 = int(value3_4)
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
         time.sleep(300)
-        value2_1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[9]").text
+        value2_1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[18]").text
         if value2_1 == '':
             value2_1 = 0
         int_value2_1 = int(value2_1)
@@ -225,7 +225,7 @@ class AssertFormsHelper:
         int_value3_15 = int(value3_15)
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
         time.sleep(300)
-        value2_1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[51]").text
+        value2_1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[39]").text
         if value2_1 == '':
             value2_1 = 0
         int_value2_1 = int(value2_1)
@@ -242,6 +242,73 @@ class AssertFormsHelper:
             value2_1 = 0
         int_value2_1 = int(value2_1)
         assert int_value2_1 == int_value3_16
+
+    def assert_2_1_3_18(self):
+        wd = self.app.wd
+        #Линии связи
+        value1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[18]").text
+        if value1 == '':
+            value1 = 0
+        int_value1 = int(value1)
+        # Электроснаб
+        value2 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[21]").text
+        if value2 == '':
+            value2 = 0
+        int_value2 = int(value2)
+        # Внеш возд
+        value3 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[24]").text
+        if value3 == '':
+            value3 = 0
+        int_value3 = int(value3)
+        # Прочие
+        value4 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[27]").text
+        if value4 == '':
+            value4 = 0
+        int_value4 = int(value4)
+        # Линии связиНаруш.техн. проз. работ ШН
+        value5 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[30]").text
+        if value5 == '':
+            value5 = 0
+        int_value5 = int(value5)
+        # Причина не установлена
+        value6 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[33]").text
+        if value6 == '':
+            value6 = 0
+        int_value6 = int(value6)
+        # Неисправность КТСМ
+        value7 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[36]").text
+        if value7 == '':
+            value7 = 0
+        int_value7 = int(value7)
+        value3_18 = int_value7 + int_value6 + int_value5 + int_value4 + int_value3 + int_value2 + int_value1
+        wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
+        time.sleep(300)
+        value2_1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[42]").text
+        if value2_1 == '':
+            value2_1 = 0
+        int_value2_1 = int(value2_1)
+        assert int_value2_1 == value3_18
+
+    def assert_2_1_3_19_3_20(self):
+        wd = self.app.wd
+        value3_18 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[3]").text
+        if value3_18 == '':
+            value3_18 = 0
+        int_value3_18 = int(value3_18)
+        wd.find_element_by_xpath("//span[text()='3.19 Отказы УКСПС']").click()
+        time.sleep(15)
+        value3_19 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[3]").text
+        if value3_19 == '':
+            value3_19 = 0
+        int_value3_19 = int(value3_19)
+        int_value_uksps_kgu = int_value3_19 + int_value3_18
+        wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
+        time.sleep(300)
+        value2_1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[9]").text
+        if value2_1 == '':
+            value2_1 = 0
+        int_value2_1 = int(value2_1)
+        assert int_value2_1 == int_value_uksps_kgu
 
      # coding late, else will be confuse
     def assert_2_1_2_2(self):

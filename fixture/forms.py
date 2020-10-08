@@ -28,10 +28,7 @@ class FormsHelper:
         time.sleep(3)
 
 # Choice form
-    def select_high_speed(self):
-        wd = self.app.wd
-        wd.find_element_by_xpath("//span[text()='Скоростной ход']").click()
-        time.sleep(15)
+    #Analytical forms
 
     def select_1_1(self):
         wd = self.app.wd
@@ -61,6 +58,16 @@ class FormsHelper:
     def select_1_12(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='1.12 Закрытия ЖАТ']").click()
+        time.sleep(15)
+
+    def select_1_13(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.13 Задержки у входных']").click()
+        time.sleep(15)
+
+    def select_1_14(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.14 Перекрытия']").click()
         time.sleep(15)
 
     def select_1_15(self):
@@ -188,6 +195,11 @@ class FormsHelper:
         wd.find_element_by_xpath("//span[text()='3.11 Электропитающие установки']").click()
         time.sleep(15)
 
+    def select_3_12(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.12 Аккумуляторы']").click()
+        time.sleep(15)
+
     def select_3_13(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='3.13 Элементы защиты']").click()
@@ -198,10 +210,34 @@ class FormsHelper:
         wd.find_element_by_xpath("//span[text()='3.15 Микропроцессорные системы ']").click()
         time.sleep(15)
 
-
     def select_3_16(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='3.16 ГАЦ']").click()
+        time.sleep(15)
+
+    def select_3_17(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.17 Основные элементы ГАЦ']").click()
+        time.sleep(15)
+
+    def select_3_18(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.18 КТСМ']").click()
+        time.sleep(15)
+
+    def select_3_19(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.19 Отказы УКСПС']").click()
+        time.sleep(15)
+
+    def select_3_20(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.20 Отказы КГУ']").click()
+        time.sleep(15)
+
+    def select_3_21(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.21 Срабатывания УКСПС']").click()
         time.sleep(15)
 
     def select_3_22(self):
@@ -212,4 +248,43 @@ class FormsHelper:
     def select_3_23(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='3.23 Справка УКСПС, КГУ']").click()
+        time.sleep(15)
+
+    #Extra forms
+
+    def select_high_speed(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1 Показатели скоростных направлений']").click()
+        time.sleep(15)
+
+    #Operational reports
+
+    def select_O(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//li[@title='Журнал учета нарушений нормальной работы устройств ЖАТ']").click()
+        time.sleep(15)
+
+    def select_O1(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='О1. ШУ-78']").click()
+        time.sleep(15)
+
+    def select_O2(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='О2. Отчет ЦУСИ']").click()
+        time.sleep(15)
+
+    def select_O3(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='О3. Отчет ЦЧС']").click()
+        time.sleep(15)
+
+    def select_O4(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='О4. Отчет ЦШ']").click()
+        time.sleep(15)
+
+    def select_O5(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='О5. Отчет ЦШ (факты)']").click()
         time.sleep(15)
