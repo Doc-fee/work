@@ -175,6 +175,8 @@ class AssertFormsHelper:
     def assert_2_1_3_9(self):
         wd = self.app.wd
         value3_9 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[16]/td[3]").text
+        if value3_9 == '':
+            value3_9 = 0
         int_value3_9 = int(value3_9)
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
         time.sleep(300)
@@ -186,20 +188,24 @@ class AssertFormsHelper:
 
     def assert_2_1_3_10(self):
         wd = self.app.wd
-        value3_9 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[12]/td[3]").text
-        int_value3_9 = int(value3_9)
+        value3_10 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[12]/td[3]").text
+        if value3_10 == '':
+            value3_10 = 0
+        int_value3_10 = int(value3_10)
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
         time.sleep(300)
         value2_1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[30]").text
         if value2_1 == '':
             value2_1 = 0
         int_value2_1 = int(value2_1)
-        assert int_value2_1 == int_value3_9
+        assert int_value2_1 == int_value3_10
 
 
     # def assert_2_1_3_11(self):
     #     wd = self.app.wd
     #     value3_11 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[10]/td[3]").text
+    #     if value3_11 == '':v
+    #       value3_11 = 0
     #     int_value3_11 = int(value3_11)
     #     wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
     #     time.sleep(300)
@@ -210,6 +216,8 @@ class AssertFormsHelper:
     def assert_2_1_3_13(self):
         wd = self.app.wd
         value3_13 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[9]/td[3]").text
+        if value3_13 == '':
+            value3_13 = 0
         int_value3_13 = int(value3_13)
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
         time.sleep(300)
@@ -219,9 +227,25 @@ class AssertFormsHelper:
         int_value2_1 = int(value2_1)
         assert int_value2_1 == int_value3_13
 
+    def assert_2_1_3_14(self):
+        wd = self.app.wd
+        value3_14 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[3]").text
+        if value3_14 == '':
+            value3_14 = 0
+        int_value3_14 = int(value3_14)
+        wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
+        time.sleep(300)
+        value2_1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[39]").text
+        if value2_1 == '':
+            value2_1 = 0
+        int_value2_1 = int(value2_1)
+        assert int_value2_1 == int_value3_14
+
     def assert_2_1_3_15(self):
         wd = self.app.wd
         value3_15 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[3]").text
+        if value3_15 == '':
+            value3_15 = 0
         int_value3_15 = int(value3_15)
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
         time.sleep(300)
@@ -234,6 +258,8 @@ class AssertFormsHelper:
     def assert_2_1_3_16(self):
         wd = self.app.wd
         value3_16 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[3]").text
+        if value3_16 == '':
+            value3_16 = 0
         int_value3_16 = int(value3_16)
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
         time.sleep(300)

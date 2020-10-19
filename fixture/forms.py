@@ -205,6 +205,11 @@ class FormsHelper:
         wd.find_element_by_xpath("//span[text()='3.13 Элементы защиты']").click()
         time.sleep(15)
 
+    def select_3_14(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3.14 Микропроцессорные системы']").click()
+        time.sleep(15)
+
     def select_3_15(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='3.15 Микропроцессорные системы ']").click()
