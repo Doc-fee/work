@@ -69,20 +69,25 @@ class CounterHelper:
         app.filter.open_filter()
         app.filter.filter_for_1st_quarter()
         time.sleep(5)
+        f_number_filter = wd.find_element_by_id("countData").text
+        int_f_number_filter = int(f_number_filter)
         app.filter.click_filter_ok()
         total_number = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[1]/td[3]").text
         if total_number == '':
             total_number = 0
         int_total_number = int(total_number)
         app.filter.open_filter()
-        number_filter = wd.find_element_by_id("countData").text
-        int_number_filter = int(number_filter)
-        if int_total_number == int_number_filter:
-            print("Счётчик работает корректно")
+        s_number_filter = wd.find_element_by_id("countData").text
+        int_s_number_filter = int(s_number_filter)
+        if int_total_number == int_s_number_filter:
+            if int_total_number == int_f_number_filter:
+                print("Счётчик работает корректно")
+            else:
+                print("Ошибка в счётчике до кнопки 'ок' " + str(int_total_number) + " - " + str(int_f_number_filter))
         else:
-            print("Ошибка в счётчике " + str(int_total_number) + " - " + str(int_number_filter))
-        # assert int_total_number == int_s_number_filter
-        # assert int_total_number == int_f_number_filter
+            print("Ошибка в счётчике после кнопки 'ок' " + str(int_total_number) + " - " + str(int_s_number_filter))
+        assert int_total_number == int_s_number_filter
+        assert int_total_number == int_f_number_filter
 
 
     # оперативная отчётность + 3.23
@@ -123,6 +128,34 @@ class CounterHelper:
         app.filter.click_filter_ok()
         row_count = len(wd.find_elements_by_xpath("//div[@id='contentScroll']//tbody[@id='dataBody']/tr"))
         total_number = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[%s]/td[6]" % row_count).text
+        if total_number == '':
+            total_number = 0
+        int_total_number = int(total_number)
+        app.filter.open_filter()
+        s_number_filter = wd.find_element_by_id("countData").text
+        int_s_number_filter = int(s_number_filter)
+        if int_total_number == int_s_number_filter:
+            if int_total_number == int_f_number_filter:
+                print("Счётчик работает корректно")
+            else:
+                print("Ошибка в счётчике до кнопки 'ок' " + str(int_total_number) + " - " + str(int_f_number_filter))
+        else:
+            print("Ошибка в счётчике после кнопки 'ок' " + str(int_total_number) + " - " + str(int_s_number_filter))
+        assert int_total_number == int_s_number_filter
+        assert int_total_number == int_f_number_filter
+
+    #только для форм, где всего отказов - 1й столбец, последняя строка
+    #доп формы №5
+    def counter_coulm2_last_row(self, app):
+        wd = self.app.wd
+        app.filter.open_filter()
+        app.filter.filter_for_1st_quarter()
+        time.sleep(5)
+        f_number_filter = wd.find_element_by_id("countData").text
+        int_f_number_filter = int(f_number_filter)
+        app.filter.click_filter_ok()
+        row_count = len(wd.find_elements_by_xpath("//div[@id='contentScroll']//tbody[@id='dataBody']/tr"))
+        total_number = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[%s]/td[2]" % row_count).text
         if total_number == '':
             total_number = 0
         int_total_number = int(total_number)

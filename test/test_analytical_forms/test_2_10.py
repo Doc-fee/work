@@ -10,7 +10,6 @@ def test_detail_total(app):
     app.filter.click_filter_ok()
     app.details.detail_total()
 
-
 def test_detail_all(app):
     app.open_home_page()
     app.click_starting_overlay()

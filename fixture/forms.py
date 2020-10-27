@@ -9,7 +9,7 @@ class FormsHelper:
 
     def select_extra_forms(self):
         wd = self.app.wd
-        wd.find_element_by_xpath("(//div[text()='III. Дополнительные формы'])").click()
+        wd.find_element_by_xpath("(//div[text()='III. Дополнительная отчетность'])").click()
         time.sleep(3)
 
     def select_operational_reports(self):
@@ -260,6 +260,21 @@ class FormsHelper:
     def select_high_speed(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='1 Показатели скоростных направлений']").click()
+        time.sleep(15)
+
+    def select_high_speed_trains(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='2 Отказы с задержками скоростных поездов']").click()
+        time.sleep(15)
+
+    def select_duration_2_1(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='3 Продолжительность отказов Ш по устройствам ЖАТ']").click()
+        time.sleep(15)
+
+    def select_unfilled_waivers(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='5 Незаполненные отказы']").click()
         time.sleep(15)
 
     #Operational reports

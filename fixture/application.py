@@ -5,6 +5,7 @@ from fixture.details import DetailsHelper
 from fixture.filter import FilterHelper
 from fixture.forms import FormsHelper
 from fixture.counter import CounterHelper
+from fixture.sum_table import SumTableHelper
 import time
 
 class Application:
@@ -24,6 +25,7 @@ class Application:
         self.details = DetailsHelper(self)
         self.counter = CounterHelper(self)
         self.assert_forms = AssertFormsHelper(self)
+        self.sum_table = SumTableHelper(self)
         self.base_url=base_url
 
     def open_home_page(self):
