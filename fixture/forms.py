@@ -80,6 +80,41 @@ class FormsHelper:
         wd.find_element_by_xpath("//span[text()='1.16 Отказы по объектам ЖАТ']").click()
         time.sleep(15)
 
+    def select_1_17(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//li[@title='Факты задержек пассажирских и пригородных поездов']").click()
+        time.sleep(15)
+
+    def select_1_18(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.18 Факты грузовых']").click()
+        time.sleep(15)
+
+    def select_1_19(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.19 Факты по элементам ЖАТ']").click()
+        time.sleep(15)
+
+    def select_1_20(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.20 Отказы с фактами пассажирских']").click()
+        time.sleep(15)
+
+    def select_1_21(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.21 Отказы с фактами пригородных']").click()
+        time.sleep(15)
+
+    def select_1_22(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.22 Отказы с фактами грузовых']").click()
+        time.sleep(15)
+
+    def select_1_23(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='1.23 Отказы с задержками СП, ВСП']").click()
+        time.sleep(15)
+
     def select_1_24(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//li[@title='Отказы систем ЖАТ 1 и 2 категории по классам железнодорожных линий']").click()
@@ -93,6 +128,16 @@ class FormsHelper:
     def select_1_27(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//li[@title='Опасные отказы устройств ЖАТ (Ш)']").click()
+        time.sleep(15)
+
+    def select_1_28(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//li[@title='Количество отказов по объектам ЖАТ']").click()
+        time.sleep(30)
+
+    def select_1_30(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//li[@title='Отказы технических средств']").click()
         time.sleep(15)
 
     def select_2_1(self):
@@ -128,6 +173,11 @@ class FormsHelper:
     def select_2_7(self):
         wd = self.app.wd
         wd.find_element_by_xpath("//span[text()='2.7 Внешние воздействия']").click()
+        time.sleep(60)
+
+    def select_2_8(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='2.8 Факты по характеру']").click()
         time.sleep(60)
 
     def select_2_9(self):

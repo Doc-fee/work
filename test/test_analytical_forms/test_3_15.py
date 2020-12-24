@@ -38,4 +38,24 @@ def test_with_2_1(app):
     app.filter.click_filter_ok()
     app.assert_forms.assert_2_1_3_15()
 
+def test_sum_str(app):
+    app.open_home_page()
+    app.click_starting_overlay()
+    app.forms.select_analytical_forms()
+    app.forms.select_3_15()
+    app.filter.open_filter()
+    app.filter.filter_for_1st_quarter()
+    app.filter.click_filter_ok()
+    app.sum_table.sum_rows(app)
+
+def test_sum_columns(app):
+    app.open_home_page()
+    app.click_starting_overlay()
+    app.forms.select_analytical_forms()
+    app.forms.select_3_15()
+    app.filter.open_filter()
+    app.filter.filter_for_1st_quarter()
+    app.filter.click_filter_ok()
+    app.sum_table.sum_columns(app)
+
 
