@@ -13,7 +13,7 @@ class CounterHelper:
         wd = self.app.wd
         app.filter.open_filter()
         app.filter.filter_for_1st_quarter()
-        time.sleep(5)
+        wd.implicitly_wait(5)
         f_number_filter = wd.find_element_by_id("countData").text
         int_f_number_filter = int(f_number_filter)
         app.filter.click_filter_ok()
@@ -41,7 +41,7 @@ class CounterHelper:
         wd = self.app.wd
         app.filter.open_filter()
         app.filter.filter_for_1st_quarter()
-        time.sleep(5)
+        wd.implicitly_wait(5)
         f_number_filter = wd.find_element_by_id("countData").text
         int_f_number_filter = int(f_number_filter)
         app.filter.click_filter_ok()
@@ -68,7 +68,7 @@ class CounterHelper:
         wd = self.app.wd
         app.filter.open_filter()
         app.filter.filter_for_1st_quarter()
-        time.sleep(5)
+        wd.implicitly_wait(5)
         f_number_filter = wd.find_element_by_id("countData").text
         int_f_number_filter = int(f_number_filter)
         app.filter.click_filter_ok()
@@ -95,7 +95,7 @@ class CounterHelper:
         wd = self.app.wd
         app.filter.open_filter()
         app.filter.filter_for_1st_quarter()
-        time.sleep(5)
+        wd.implicitly_wait(5)
         f_number_filter = wd.find_element_by_id("countData").text
         int_f_number_filter = int(f_number_filter)
         app.filter.click_filter_ok()
@@ -122,7 +122,7 @@ class CounterHelper:
         wd = self.app.wd
         app.filter.open_filter()
         app.filter.filter_for_1st_quarter()
-        time.sleep(5)
+        wd.implicitly_wait(5)
         f_number_filter = wd.find_element_by_id("countData").text
         int_f_number_filter = int(f_number_filter)
         app.filter.click_filter_ok()
@@ -150,7 +150,7 @@ class CounterHelper:
         wd = self.app.wd
         app.filter.open_filter()
         app.filter.filter_for_1st_quarter()
-        time.sleep(5)
+        wd.implicitly_wait(5)
         f_number_filter = wd.find_element_by_id("countData").text
         int_f_number_filter = int(f_number_filter)
         app.filter.click_filter_ok()

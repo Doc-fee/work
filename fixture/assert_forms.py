@@ -151,7 +151,7 @@ class AssertFormsHelper:
             value3_7 = 0
         int_value3_7 = int(value3_7)
         wd.find_element_by_xpath("//span[text()='2.1 Отказы по типам устройств']").click()
-        time.sleep(300)
+        wd.implicitly_wait(300)
         value2_1 = wd.find_element_by_xpath("//tbody[@id='dataBody']/tr[25]/td[12]").text
         if value2_1 == '':
             value2_1 = 0

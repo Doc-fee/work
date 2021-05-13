@@ -19,6 +19,7 @@ class Application:
             self.wd = webdriver.Ie()
         else:
             raise ValueError("Unrecognized browser %s" % browser)
+        self.wd.maximize_window()
         self.wd.implicitly_wait(30)
         self.filter = FilterHelper(self)
         self.forms = FormsHelper(self)
@@ -26,7 +27,7 @@ class Application:
         self.counter = CounterHelper(self)
         self.assert_forms = AssertFormsHelper(self)
         self.sum_table = SumTableHelper(self)
-        self.base_url=base_url
+        self.base_url = base_url
 
     def open_home_page(self):
         wd = self.wd
@@ -42,7 +43,6 @@ class Application:
         window = wd.find_elements_by_xpath("//div[@id='starting-overlay']")
         if window:
             self.click_clear()
-
 
     def destroy(self):
         self.wd.quit()

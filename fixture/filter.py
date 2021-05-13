@@ -8,7 +8,9 @@ class FilterHelper:
     def click_filter_ok(self):
         wd = self.app.wd
         wd.find_element_by_id("buttonFilterboxOk").click()
-        time.sleep(30)
+        #wd.implicitly_wait(30)
+        time.sleep(170)
+
 
     def open_filter(self):
         wd = self.app.wd
@@ -32,6 +34,17 @@ class FilterHelper:
         wd.find_element_by_xpath('//a[@class="ui-state-default"][text()="1"]').click()
         wd.find_element_by_xpath("//span[text()='Дата конца']").click()
         wd.find_element_by_xpath("//select [@class='ui-datepicker-year']/option[text()='2019']").click()
+        wd.find_element_by_xpath("//select [@class='ui-datepicker-month']/option[text()='Декабрь']").click()
+        wd.find_element_by_xpath('//a[@class="ui-state-default"][text()="31"]').click()
+
+    def filter_for_2020(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//span[text()='Дата начала']").click()
+        wd.find_element_by_xpath("//select [@class='ui-datepicker-year']/option[text()='2020']").click()
+        wd.find_element_by_xpath("//select [@class='ui-datepicker-month']/option[text()='Январь']").click()
+        wd.find_element_by_xpath('//a[@class="ui-state-default"][text()="1"]').click()
+        wd.find_element_by_xpath("//span[text()='Дата конца']").click()
+        wd.find_element_by_xpath("//select [@class='ui-datepicker-year']/option[text()='2020']").click()
         wd.find_element_by_xpath("//select [@class='ui-datepicker-month']/option[text()='Декабрь']").click()
         wd.find_element_by_xpath('//a[@class="ui-state-default"][text()="31"]').click()
 
