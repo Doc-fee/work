@@ -11,7 +11,7 @@ def app(request):
 
 def pytest_addoption(parser):
     parser.addoption('--browser', action='store', default='firefox')
-    parser.addoption('--baseUrl', action='store', default='http://sobolev/onil.web.uo/')
+    parser.addoption('--baseUrl', action='store', default='http://onil-iis/onil.web.uo/')
 
 # @pytest.fixture(scope='session')
 # def app(request):
