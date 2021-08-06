@@ -5,7 +5,7 @@ import pytest
 def app(request):
     browser = request.config.getoption('--browser')
     base_url = request.config.getoption('--baseUrl')
-    fixture = Application(browser = browser, base_url=base_url)
+    fixture = Application(browser=browser, base_url=base_url)
     request.addfinalizer(fixture.destroy)
     return fixture
 

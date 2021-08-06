@@ -2,8 +2,8 @@ import datetime
 from selenium.common.exceptions import NoSuchElementException
 
 # что это??
-class TimeUnit(object):
-    pass
+#class TimeUnit(object):
+#    pass
 
 
 class SumTableHelper:
@@ -13,7 +13,7 @@ class SumTableHelper:
 
 # метод для тестирования строки Итого некотрых форм
 # для 1.1-1.4, 1.11-1.25, 1.27, 1.30, 2.*, 3.4, 3.11, 3.12, 3.14-3.22
-    def sum_rows(self, i):
+    def sum_rows(self):
         wd = self.app.wd
         d = datetime.datetime.today()
         name_form = wd.find_element_by_xpath("//div[@id='breadNavBar']").text
@@ -26,7 +26,7 @@ class SumTableHelper:
         for i in range(1, column_count):
             sum = 0
             if i != 1 and i % 3 != 1:
-                int_r = 0
+                float_r = 0
                 for row in rows:
                     name_str = row.find_element_by_xpath(".//td[1]").text
                     # пытаюсь найти ссылки
@@ -38,17 +38,17 @@ class SumTableHelper:
                     # если не нахожу ссылки, ставит 0
                     except NoSuchElementException:
                         r = 0
-                    int_r = int(r)
-                    sum = sum + int_r
-                total.append(int_r)
+                    float_r = float(r)
+                    sum = sum + float_r
+                total.append(float_r)
                 #сумма с вычетом Итого
-                sum = sum - int_r
+                sum = sum - float_r
                 sum_rows.append(sum)
-                condition_errow = sum-int_r
+                condition_errow = sum-float_r
                 if condition_errow != 0:
-                    f.write(' Столбец: ' + str(i) + ' Итого: ' + str(int_r) + ' Строки: ' + str(sum) + ' - Ошибка!' + "\n")
+                    f.write(' Столбец: ' + str(i) + ' Итого: ' + str(float_r) + ' Строки: ' + str(sum) + ' - Ошибка!' + "\n")
                 else:
-                    f.write(' Столбец: ' + str(i) + ' Итого: ' + str(int_r) + ' Строки: ' + str(sum) + "\n")
+                    f.write(' Столбец: ' + str(i) + ' Итого: ' + str(float_r) + ' Строки: ' + str(sum) + "\n")
         f.close()
 #        assert sum_rows == total
 
@@ -91,8 +91,8 @@ class SumTableHelper:
                     nextColumn_с = 6
                     try:
                         count_c = column.text
-                        if count_c =='':
-                            count_c=0
+                        if count_c == '':
+                            count_c = 0
                     except NoSuchElementException:
                         count_c = 0
                     sum_current += 0
@@ -219,10 +219,10 @@ class SumTableHelper:
                         if rr == p:
                             f.write(
                                 'Строка: ' + str(name_str) + '(' + str(indextr) + ')' + ' Столбец: ' + str(indextd) +
-                                ' в таблице:' + str(p) + ' результат:'+ str(rr)+ ' Победил Санёк!\n')
+                                ' в таблице:' + str(p) + ' результат:'+ str(rr)+ ' корректно\n')
                         else: f.write('Строка: ' + str(name_str) +'(' + str(indextr) +')' + ' Столбец: ' + str(indextd)
                                       +' в таблице:' + str(p) + ' результат ММ:'+ str(rr)+
-                                      ' Победила форма!\n')
+                                      ' ошибка\n')
                 indextd += 1
         f.close()
         print(list_procent, list_rr)
@@ -308,12 +308,12 @@ class SumTableHelper:
                                 f.write(
                                     'Строка: ' + str(name_str) + '(' + str(indextr) + ')' + ' Столбец: ' + str(
                                         indextd) +
-                                    ' в таблице:' + str(p) + ' результат:' + str(rr) + ' Победил Санёк!\n')
+                                    ' в таблице:' + str(p) + ' результат:' + str(rr) + ' корректно\n')
                             else:
                                 f.write(
                                     'Строка: ' + str(name_str) + '(' + str(indextr) + ')' + ' Столбец: ' + str(indextd)
                                     + ' в таблице:' + str(p) + ' результат ММ:' + str(rr) +
-                                    ' Победила форма!\n')
+                                    ' ошибка\n')
                     else:
                         if indextd == 1:
                             nextColumn_l = 5
@@ -367,12 +367,12 @@ class SumTableHelper:
                             f.write(
                                 'Строка: ' + str(name_str) + '(' + str(indextr) + ')' + ' Столбец: ' + str(
                                     indextd) +
-                                ' в таблице:' + str(p) + ' результат:' + str(rr) + ' Победил Санёк!\n')
+                                ' в таблице:' + str(p) + ' результат:' + str(rr) + ' корректно\n')
                         else:
                             f.write(
                                 'Строка: ' + str(name_str) + '(' + str(indextr) + ')' + ' Столбец: ' + str(indextd)
                                 + ' в таблице:' + str(p) + ' результат ММ:' + str(rr) +
-                                ' Победила форма!\n')
+                                ' ошибка\n')
 
 
                 indextd += 1
